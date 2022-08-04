@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
+import { Handlers } from "$fresh/server.ts";
 import Preview from "../islands/Preview.tsx";
 import Meta from "../components/Meta.tsx";
 
@@ -14,6 +15,12 @@ const metadata = {
         description: 'Debug metadata code',
         image: 'https://avatars.githubusercontent.com/u/1897340?v=4',
     }
+};
+
+export const handler: Handlers = {
+  GET(_, ctx) {
+    return ctx.render();
+  },
 };
 
 export default function Home() {
