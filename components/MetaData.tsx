@@ -7,7 +7,7 @@ interface props {
 }
 
 export default function MetaData({ result }: props) {
-  if (Object.entries(result).length === 0) return;
+  if (Object.entries(result).length === 0) return null;
 
   if (result.error) return (<span class={tw`p-4 mx-auto max-w-screen-md`}>{result.error}</span>)
 
