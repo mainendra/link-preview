@@ -25,9 +25,9 @@ export default function MetaData({ result }: props) {
                         <tr class={tw`bg-white border-b`}>
                             <td class={tw`p-4 text-black text-base bg-gray-100`}>{key}</td>
                             {
-                                (key.includes('image')) ?
+                                (key.endsWith('image')) ?
                                 <td class={tw`p-4`}><img src={value} class={tw`w-64 hover:scale-125 hover:border-2 hover:rounded-md transition-all`} /></td> :
-                                (key.includes('url')) ?
+                                (key.endsWith('url')) ?
                                 <td class={tw`p-4`}><a class={tw`hover:underline hover:text-blue-500`} href={value}>{value}</a></td> :
                                 <td class={tw`p-4`}>{value}</td>
                             }
