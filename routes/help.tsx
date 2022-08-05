@@ -2,6 +2,7 @@
 import { HandlerContext, Handlers } from "$fresh/server.ts";
 import { h } from "preact";
 import { tw } from "@twind";
+import HomeButton from "../components/HomeButton.tsx";
 
 function StyledText({ text, styleClass = '' } : { text: string, styleClass?: string }) {
     return (<span class={styleClass}>{text}</span>)
@@ -17,6 +18,9 @@ export const handler: Handlers = {
 export default function Help({ data }: { data: string }) {
   return (
     <div class={tw`p-4 mx-auto max-w-screen-md`}>
+        <a href='/' class={tw`absolute right-4 top-4`}>
+            <HomeButton styleClass={tw`w-6 h-6 animate-pulse`} />
+        </a>
         <h1 class={tw`underline text-2xl my-4`}>How to as API</h1>
         <p>
             You can use this as api endpoint.<br/>

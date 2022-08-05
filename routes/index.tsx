@@ -22,7 +22,7 @@ export default function Home() {
     <div class={tw`p-4 mx-auto max-w-screen-md`}>
         <Meta {...metadata} />
         <a href='/help' class={tw`absolute right-4 top-4`}>
-            <HelpButton styleClass={tw`w-6 h-6`} />
+            <HelpButton styleClass={tw`w-6 h-6 animate-pulse`} />
         </a>
         <Preview />
     </div>
