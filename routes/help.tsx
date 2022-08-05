@@ -21,7 +21,7 @@ export default function Help({ data }: { data: string }) {
         <a href='/' class={tw`absolute right-4 top-4`}>
             <HomeButton styleClass={tw`w-6 h-6 animate-pulse`} />
         </a>
-        <h1 class={tw`underline text-2xl my-4`}>How to as API</h1>
+        <h1 class={tw`text-2xl my-4 animate-bounce`}>How to - as API</h1>
         <p>
             You can use this as api endpoint.<br/>
             Pass <StyledText text='url' styleClass={tw`font-bold text-blue-700 hover:underline`} /> as url pararameter.<br/>
