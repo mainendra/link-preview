@@ -24,6 +24,7 @@ export const handler: Handlers = {
     try {
       const { url } = await req.json();
       const result = await fetch(decodeURIComponent(url)).then(resp => resp.text());
+      console.log(result);
       const dom = (new DOMParser()).parseFromString(result, 'text/html');
       const documentTitle = dom?.querySelector('title')?.innerHTML;
       const metaTagElements = dom?.getElementsByTagName('meta') ?? [];
@@ -31,8 +32,7 @@ export const handler: Handlers = {
           documentTitle,
           tags: parseMetaTags(metaTagElements),
       }));
-    } catch (err) {
-      console.log(err);
+    } catch (_err) {
       return new Response(JSON.stringify({ error: 'Failed to fetch url'}));
     }
   },
