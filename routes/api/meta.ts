@@ -22,8 +22,7 @@ function parseMetaTags(metaTagElements: Element[]) {
 export const handler: Handlers = {
   async POST(req: Request) {
     try {
-      const { url, origin } = await req.json();
-      console.log(origin);
+      const { url } = await req.json();
       const result = await fetch(decodeURIComponent(url)).then(resp => resp.text());
       const dom = (new DOMParser()).parseFromString(result, 'text/html');
       const documentTitle = dom?.querySelector('title')?.innerHTML;
