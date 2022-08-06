@@ -23,7 +23,7 @@ export default function Help({ data }: { data: string }) {
         </a>
         <h1 class={tw`text-2xl my-4 animate-bounce`}>How to - as API</h1>
         <p>
-            To use api endpoint, Pass <StyledText text='url' styleClass={tw`font-bold text-blue-700 hover:underline`} /> as Query string.<br/>
+            To use api endpoint, Pass <StyledText text='url' styleClass={tw`font-bold text-blue-700 hover:underline`} /> as Query string. It works with POST request too.<br/>
             <span class={tw`animate-pulse`}>e.g.</span> <a class={tw`hover:text-blue-700`} href="/api/meta?url=https://www.youtube.com/watch?v=xqqTL91J1lo">{data}/api/meta?url=https://www.youtube.com/watch?v=xqqTL91J1lo</a>
         </p>
     </div>
