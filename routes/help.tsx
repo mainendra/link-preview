@@ -3,6 +3,13 @@ import { HandlerContext, Handlers } from "$fresh/server.ts";
 import { h } from "preact";
 import { tw } from "@twind";
 import HomeButton from "../components/HomeButton.tsx";
+import Meta from "../components/Meta.tsx";
+
+const metadata = {
+    documentTitle: 'Link Preview - Help',
+    title: 'Link Preview - Help',
+    description: 'How to use api endpoint',
+};
 
 function StyledText({ text, styleClass = '' } : { text: string, styleClass?: string }) {
     return (<span class={styleClass}>{text}</span>)
@@ -18,6 +25,7 @@ export const handler: Handlers = {
 export default function Help({ data }: { data: string }) {
   return (
     <div class={tw`p-4 mx-auto max-w-screen-md`}>
+        <Meta {...metadata} />
         <a href='/' class={tw`absolute right-4 top-4`}>
             <HomeButton styleClass={tw`w-6 h-6 animate-pulse`} />
         </a>
