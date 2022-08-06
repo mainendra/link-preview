@@ -6,7 +6,17 @@ import { debounce } from "$debounce";
 import Loading from "../components/Loading.tsx";
 import MetaData from "../components/MetaData.tsx";
 
-const DELAY = 1000;
+const DELAY = 500;
+
+function isValidUrl(urlStr: string) {
+    try {
+        return Boolean(new URL(urlStr));
+    } catch (_err){
+        return false;
+    }
+}
+
+const INVALID_URL_ERROR = {error: 'Invalid URL'};
 
 export default function Home() {
   const [result, setResult] = useState<{ [key: string]: string }>({});
@@ -16,6 +26,11 @@ export default function Home() {
   const onChangeHandler = useCallback(debounce(() => {
     const url = inputRef?.current?.value;
     if (!url || url === urlRef.current) return;
+    if (!isValidUrl(url)) {
+        setResult(INVALID_URL_ERROR);
+        return;
+    }
+
     urlRef.current = url;
     setLoading(true);
     fetch('/api/meta', {
