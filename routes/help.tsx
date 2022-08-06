@@ -37,11 +37,11 @@ export default function Help({ data }: { data: string }) {
         <hr class={tw`my-8`} />
         <h1 class={tw`text-2xl my-4 animate-bounce`}>Techstack</h1>
         <ul>
-            <li><a class={tw`flex`} href='https://fresh.deno.dev'>Fresh <img src='https://github.com/denoland/fresh/raw/main/www/static/logo.svg' class={tw`mx-4 w-6 h-6`} /></a></li>
-            <li><a class={tw`flex`} href='https://preactjs.com'>Preact <img src='https://raw.githubusercontent.com/preactjs/preact/8b0bcc927995c188eca83cba30fbc83491cc0b2f/logo.svg?sanitize=true' class={tw`mx-4 w-6 h-6`} /></a></li>
-            <li><a class={tw`flex`} href='https://twind.dev'>Twind <img src='https://twind.dev/assets/twind-logo-animated.svg' class={tw`mx-4 w-6 h-6`} /></a></li>
-            <li><a class={tw`flex`} href='https://deno.land'>Deno <img src='https://deno.land/logo.svg?__frsh_c=y61wzfje3yvg' class={tw`mx-4 w-6 h-6`} /></a></li>
-            <li><a class={tw`flex`} href='https://deno.com/deploy'>Deno Deploy <img src='https://deno.land/logo.svg?__frsh_c=y61wzfje3yvg' class={tw`mx-4 w-6 h-6`} /></a></li>
+            <li><a class={tw`flex hover:text-blue-700`} href='https://fresh.deno.dev'>Fresh <img src='https://github.com/denoland/fresh/raw/main/www/static/logo.svg' class={tw`mx-4 w-6 h-6`} /></a></li>
+            <li><a class={tw`flex hover:text-blue-700`} href='https://preactjs.com'>Preact <img src='https://raw.githubusercontent.com/preactjs/preact/8b0bcc927995c188eca83cba30fbc83491cc0b2f/logo.svg?sanitize=true' class={tw`mx-4 w-6 h-6`} /></a></li>
+            <li><a class={tw`flex hover:text-blue-700`} href='https://twind.dev'>Twind <img src='https://twind.dev/assets/twind-logo-animated.svg' class={tw`mx-4 w-6 h-6`} /></a></li>
+            <li><a class={tw`flex hover:text-blue-700`} href='https://deno.land'>Deno <img src='https://deno.land/logo.svg?__frsh_c=y61wzfje3yvg' class={tw`mx-4 w-6 h-6`} /></a></li>
+            <li><a class={tw`flex hover:text-blue-700`} href='https://deno.com/deploy'>Deno Deploy <img src='https://deno.land/logo.svg?__frsh_c=y61wzfje3yvg' class={tw`mx-4 w-6 h-6`} /></a></li>
         </ul>
     </div>
   );
