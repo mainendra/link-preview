@@ -29,7 +29,7 @@ export default function Home() {
   }, DELAY), [inputRef, urlRef, setResult, setLoading]);
 
   return (
-    <div class={tw`p-4 mx-auto max-w-screen-md`}>
+    <div class={tw`px-4 py-8 mx-auto max-w-screen-md`}>
         <input ref={inputRef} type="text" class={tw`w-full border border-slate-300 p-4 rounded-md`} placeholder="Enter url to fetch metata data" onKeyDown={onChangeHandler} onChange={onChangeHandler} onPaste={onChangeHandler} />
         <br />
         {
