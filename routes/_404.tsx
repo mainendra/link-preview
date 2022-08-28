@@ -12,12 +12,13 @@ const metadata = {
 
 export default function NotFound() {
   return (
-    <div class={tw`flex p-4 mx-auto max-w-screen-md h-screen`}>
+    <div class={tw`flex flex-col items-center justify-center p-4 mx-auto max-w-screen-md h-screen`}>
         <Meta {...metadata} />
         <a href='/' class={tw`absolute right-4 top-4`}>
             <HomeButton styleClass={tw`w-6 h-6 animate-pulse`} />
         </a>
-        <h1 class={tw`text-[25vh] flex h-full w-full items-center justify-center`}>404</h1>
+        <h1 class={tw`text-[25vh]`}>404</h1>
+        <h2 class={tw`text-[4vh]`}>Couldn't find what you're looking for.</h2>
     </div>
   );
 }
