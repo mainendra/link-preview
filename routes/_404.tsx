@@ -19,6 +19,9 @@ export default function NotFound() {
         </a>
         <h1 class={tw`text-[25vh]`}>404</h1>
         <h2 class={tw`text-[4vh]`}>Couldn't find what you're looking for.</h2>
+        <a href='/' class={tw`my-6 hover:underline hover:text-blue-700`}>
+            Back to the Homepage
+        </a>
     </div>
   );
 }
